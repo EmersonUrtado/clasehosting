@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tecnología Educativa en la Educación Superior</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        function actualizarFechaHora() {
+            const opciones = {
+                weekday: 'long', year: 'numeric', month: 'long',
+                day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
+            };
+            setInterval(() => {
+                const ahora = new Date();
+                document.getElementById('fecha-hora').textContent = ahora.toLocaleString('es-EC', opciones);
+            }, 1000);
+        }
+        document.addEventListener("DOMContentLoaded", actualizarFechaHora);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tecnología Educativa en la Educación Superior</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="autor.html">Autor</a>
+        <a href="sociedad_contemporanea.html">Sociedad Contemporánea</a>
+        <a href="sociedad_informacion.html">Sociedad de la Información</a>
+        <a href="sociedad_conocimiento.html">Sociedad del Conocimiento</a>
+    </nav>
+    <main>
+        <h2>¿Qué es la Tecnología Educativa?</h2>
+        <p>
+            La Tecnología Educativa en la Educación Superior se refiere al uso de herramientas tecnológicas para mejorar la enseñanza y el aprendizaje. Promueve el acceso, la personalización y la innovación en los procesos educativos.
+        </p>
+    </main>
+    <footer>
+        <span id="fecha-hora"></span>
+    </footer>
+</body>
+</html>

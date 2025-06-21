@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sociedad del Conocimiento</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        function actualizarFechaHora() {
+            const opciones = {
+                weekday: 'long', year: 'numeric', month: 'long',
+                day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
+            };
+            setInterval(() => {
+                const ahora = new Date();
+                document.getElementById('fecha-hora').textContent = ahora.toLocaleString('es-EC', opciones);
+            }, 1000);
+        }
+        document.addEventListener("DOMContentLoaded", actualizarFechaHora);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Sociedad del Conocimiento</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="autor.html">Autor</a>
+        <a href="sociedad_contemporanea.html">Sociedad Contemporánea</a>
+        <a href="sociedad_informacion.html">Sociedad de la Información</a>
+        <a href="sociedad_conocimiento.html">Sociedad del Conocimiento</a>
+    </nav>
+    <main>
+        <p>
+            La sociedad del conocimiento se enfoca en generar y compartir saberes constantemente. En este contexto, la educación superior debe adaptarse para preparar a los estudiantes con habilidades tecnológicas, cognitivas y sociales.
+        </p>
+    </main>
+    <footer>
+        <span id="fecha-hora"></span>
+    </footer>
+</body>
+</html>
